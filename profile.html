@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Page Title</title>
+			<link rel="stylesheet" href="profile.css">
+		</head>
+
+
+		<body>
+
+		<div class="topnav">
+		  <a class="active" href="http://localhost/repair/profile.html">Profile</a>
+		  <a href="http://localhost/repair/jobs.html">Jobs</a>
+		  <a href="http://localhost/repair/home.html">Home</a>
+		  <a href="http://localhost/repair/about.html">About</a>
+		  <a onclick="logout()" id="logout">Logout</a>
+
+		  <!--
+		  <input type="text" placeholder="Search..">
+		-->
+		</div>
+			<h2 style="text-align: center;" id="username"></h2>
+			<button id="canRepair" onclick="appearModemToAddRepair()">Objects you can repair</button>
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+
+			  <!-- Modal content -->
+			  <div class="modal-content">
+			    <div class="modal-header">
+			      <span class="close">&times;</span>
+			      <h3>I know how to repair...</h3>
+			    </div>
+			    <div class="modal-body">
+			
+				  <input type="checkbox" id="computer" name="vehicle1" value="Computer">
+				  <label for="vehicle1">Computer</label><br>
+				  <input type="checkbox" id="phone" name="vehicle1" value="Computer">
+				  <label for="vehicle1">Phone</label><br>
+				  <input type="checkbox" id="bike" name="vehicle1" value="Computer">
+				  <label for="vehicle1">Bike</label><br>
+				  <input type="checkbox" id="furniture" name="vehicle1" value="Computer">
+				  <label for="vehicle1">Furniture</label><br>
+				  <input type="checkbox" id="clothes" name="vehicle2" value="Phone">
+				  <label for="vehicle2">Clothes</label><br>
+				  <input type="checkbox" id="car" name="vehicle3" value="Car">
+				  <label for="vehicle3">Car</label><br><br>
+				  <button onclick="submitNewKnowledge()">Submit</button>
+				
+			    </div>
+			    
+			  </div>
+
+			</div>
+
+			<button id="toBeRepaired" onclick="toWrite()">Add objects to be repaired</button>
+
+			<div id="carbonCounter"><h3 id="carbonNumber"></h3><a href="http://localhost/repair/whatiscarbon.html">Learn more</a></div>
+
+				<div>
+				<h1>Your items:</h1>
+				</div>
+				<div id="listOfItems"></div>
+
+
+		<script type="text/javascript" src="profile.js">s</script>
+		</body>
+	</html>

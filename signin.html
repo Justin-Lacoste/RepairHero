@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: Orange;
+  padding: 30px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+nav {
+  float: left;
+  width: 60%;
+  background-color: white;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 40%;
+  background-color: white;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: orange;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Repair Hero</h2>
+</header>
+
+<section>
+  <nav>
+    <h3 id="error"></h3>
+    <ul>
+      <div id=emailForm>
+      		Email:<br>
+        	<input type="text" name="email" id="email">
+	  </div>
+      <div id=emailForm>
+			Password:<br>
+			<input type="password" name="email" id="password">
+	  </div>
+
+	  <br>
+
+	  <button type="button" onclick="send()">Send</button>
+	  <br>
+      <h4>Don't have an account? <a href="http://localhost/repair/register.html">Create one</a></h4>
+    </ul>
+  </nav>
+  
+  <article>
+    <img src="logo_repair.png" alt="Repair Hero" width="200px" height="200px">
+  </article>
+</section>
+
+<footer>
+  <p>The eco-friendly and pocket-friendly choice for you!</p>
+</footer>
+<script type="text/javascript" src="signin.js"></script>
+</body>
+</html>

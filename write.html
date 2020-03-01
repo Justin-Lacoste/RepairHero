@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Template</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: white;
+  border: 2px solid orange;
+  padding: 30px;
+  text-align: center;
+  font-size: 30px;
+  color: Black;
+}
+
+nav {
+  float: left;
+  width: 40%;
+  background-color: White;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 60%;
+  background-color: orange;
+  border: 2px solid orange
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  border: 2px solid orange
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+textarea {
+	width:100%
+    }
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Repair Item</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <textarea rows="10" name="description" id="description" maxlength="10000">Description of the broken item</textarea>
+    </ul>
+  </nav>
+  
+  <article>
+    Category of the item: <select name="item" id="item">
+		<option value="1">Computer</option>
+		<option value="2">Electronics</option>
+	    <option value="3">Bike</option>
+        <option value="4">Furniture</option>
+	    <option value="5">Clothes</option>
+        <option value="6">Car</option>
+	    <option value="7">Home appliances</option>
+    </select>
+	<br>	
+    <br>
+    <label for="quantity">Max price you're willing to pay:</label>
+	<input type="number" id="price" name="quantity" min="1" max="1000">
+	<br>
+	<br>
+	<form method="post" enctype="multipart/form-data"> Attach a picture of the item: <input type="file" name="file" onclick="isPicture()"/>
+		<br>
+    	<br>
+    	<input type="submit" value="Repair" name="submit"/>
+    </form>
+  </article>
+</section>
+
+<footer>
+  <a href="http://localhost/repair/home.html">Back to home</a>
+</footer>
+		<script type="text/javascript" src="write.js">s</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Page Title</title>
+		</head>
+		<body>
+<style>
+
+</style>
+</head>
+<body>
+
+
+			<button onclick="back()">back</button>
+			<h2>Repair item</h2>
+
+			<textarea rows="10" cols="75" name="description" id="description" maxlength="10000">Description of what needs to be repaired</textarea>
+			<br>
+			Category of the item: <select name="item" id="item">
+			    <option value="1">Computer</option>
+			    <option value="2">Phone</option>
+			    <option value="3">Bike</option>
+			    <option value="4">Furniture</option>
+			    <option value="5">Clothes</option>
+			    <option value="6">Car</option>
+			  </select>
+			  <br>
+			  <br>
+			  <label for="quantity">Max price you're willing to pay:</label>
+  				<input type="number" id="price" name="quantity" min="1" max="1000">
+			  <br>
+			  <br>
+			  <form method="post" enctype="multipart/form-data">
+			    Attach a picture of the item: <input type="file" name="file" onclick="isPicture()"/>
+			    <br>
+			    <br>
+			    <input type="submit" value="Repair" name="submit"/>
+			</form>
+
+
+
+		<script type="text/javascript" src="write.js">s</script>
+		</body>
+	</html>
